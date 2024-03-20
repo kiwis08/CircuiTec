@@ -10,6 +10,9 @@ import SwiftData
 
 @main
 struct CircuiTecApp: App {
+//    @ObservedObject var router = Route
+    
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -26,6 +29,16 @@ struct CircuiTecApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+//            NavigationStack(path: $router.navPath) {
+//                ContentView()
+//                    .navigationDestination(for: Router.Destination.self) { destination in
+//                        switch destination {
+//                        case .routeMap(let route):
+//                            AllRoutesView()
+//                        }
+//                    }
+//            }
+//            .environmentObject(router)
         }
         .modelContainer(sharedModelContainer)
     }
