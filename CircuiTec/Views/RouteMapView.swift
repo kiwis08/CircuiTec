@@ -31,7 +31,7 @@ struct RouteMapView: View {
             if routesLoaded {
                 ForEach(mapRoutes, id: \.self) { mapRoute in
                     MapPolyline(mapRoute)
-                        .stroke(Color("Bus\(route.color.rawValue.capitalized)"), lineWidth: 5.0)
+                        .stroke(Color.blue, lineWidth: 5.0)
                 }
             }
         }

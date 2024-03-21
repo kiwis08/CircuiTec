@@ -43,7 +43,7 @@ struct FirstView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
+            ScrollView {
                 
                 // Mapa
                 Map()
@@ -73,6 +73,7 @@ struct FirstView: View {
                 
             }
             .navigationTitle("¡Hola!")
+            .navigationBarTitleDisplayMode(.large)
             
         }
     }
