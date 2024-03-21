@@ -15,7 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            MainView()
+            FirstView()
                 .tabItem {
                     Label("Mi ruta", systemImage: "map")
                 }

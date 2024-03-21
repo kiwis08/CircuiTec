@@ -34,6 +34,7 @@
 		BEED56CF2BAB5E80009FA1A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEED56CE2BAB5E80009FA1A8 /* Assets.xcassets */; };
 		BEED56D32BAB5E80009FA1A8 /* LiveRouteExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BEED56BF2BAB5E7F009FA1A8 /* LiveRouteExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BEED56D92BAB60A8009FA1A8 /* RouteProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B92BAB5C63009FA1A8 /* RouteProgressView.swift */; };
+		FB9131C62BAC9420009719FD /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9131C52BAC9420009719FD /* FirstView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		BEED56CC2BAB5E7F009FA1A8 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		BEED56CE2BAB5E80009FA1A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEED56D02BAB5E80009FA1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB9131C52BAC9420009719FD /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				BEED56B02BAAAFC8009FA1A8 /* Model */,
 				BEED56AD2BAAAF19009FA1A8 /* Views */,
 				BEED569D2BAAAE9F009FA1A8 /* CircuiTecApp.swift */,
+				FB9131C52BAC9420009719FD /* FirstView.swift */,
 				BEED569F2BAAAE9F009FA1A8 /* ContentView.swift */,
 				BEED56A12BAAAE9F009FA1A8 /* Item.swift */,
 				BEED56A32BAAAEA0009FA1A8 /* Assets.xcassets */,
@@ -304,6 +307,7 @@
 				BEED56B22BAAAFD2009FA1A8 /* Route.swift in Sources */,
 				BEE288CE2BAC8C76002714F1 /* ActiveRouteMapView.swift in Sources */,
 				BEED569E2BAAAE9F009FA1A8 /* CircuiTecApp.swift in Sources */,
+				FB9131C62BAC9420009719FD /* FirstView.swift in Sources */,
 				BE2D78D32BAC8E480096BAF7 /* ActiveRoute.swift in Sources */,
 				BE2D78D62BACA4940096BAF7 /* RouteStop.swift in Sources */,
 				BE2D78D82BACA52F0096BAF7 /* Coordinate.swift in Sources */,
