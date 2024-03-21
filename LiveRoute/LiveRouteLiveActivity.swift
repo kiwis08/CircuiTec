@@ -32,7 +32,7 @@ struct LiveRouteLiveActivity: Widget {
                         Text("Siguiendo \(context.attributes.name)")
                     }
                 }
-                RouteProgressView()
+                RouteProgressView(orientation: .horizontal, color: Color("Bus\(context.attributes.color.rawValue.capitalized)"))
                     .frame(height: 20)
                     .padding()
             }
