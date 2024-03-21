@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE2D78D32BAC8E480096BAF7 /* ActiveRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D78D22BAC8E480096BAF7 /* ActiveRoute.swift */; };
+		BE2D78D42BAC91390096BAF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEED56CE2BAB5E80009FA1A8 /* Assets.xcassets */; };
+		BEE288CE2BAC8C76002714F1 /* ActiveRouteMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE288CD2BAC8C76002714F1 /* ActiveRouteMapView.swift */; };
 		BEED569E2BAAAE9F009FA1A8 /* CircuiTecApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED569D2BAAAE9F009FA1A8 /* CircuiTecApp.swift */; };
 		BEED56A02BAAAE9F009FA1A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED569F2BAAAE9F009FA1A8 /* ContentView.swift */; };
 		BEED56A22BAAAE9F009FA1A8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56A12BAAAE9F009FA1A8 /* Item.swift */; };
@@ -54,6 +57,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE2D78D22BAC8E480096BAF7 /* ActiveRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRoute.swift; sourceTree = "<group>"; };
+		BEE288CD2BAC8C76002714F1 /* ActiveRouteMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRouteMapView.swift; sourceTree = "<group>"; };
 		BEED569A2BAAAE9F009FA1A8 /* CircuiTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircuiTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEED569D2BAAAE9F009FA1A8 /* CircuiTecApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuiTecApp.swift; sourceTree = "<group>"; };
 		BEED569F2BAAAE9F009FA1A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -140,6 +145,7 @@
 		BEED56AD2BAAAF19009FA1A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BEE288CD2BAC8C76002714F1 /* ActiveRouteMapView.swift */,
 				BEED56AE2BAAAF9E009FA1A8 /* AllRoutesView.swift */,
 				BEED56B52BAB3E4B009FA1A8 /* RouteMapView.swift */,
 				BEED56B72BAB48E4009FA1A8 /* MainView.swift */,
@@ -152,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				BEED56B12BAAAFD2009FA1A8 /* Route.swift */,
+				BE2D78D22BAC8E480096BAF7 /* ActiveRoute.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -260,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEED56A72BAAAEA0009FA1A8 /* Preview Assets.xcassets in Resources */,
+				BE2D78D42BAC91390096BAF7 /* Assets.xcassets in Resources */,
 				BEED56A42BAAAEA0009FA1A8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +294,9 @@
 				BEED56B62BAB3E4B009FA1A8 /* RouteMapView.swift in Sources */,
 				BEED56A22BAAAE9F009FA1A8 /* Item.swift in Sources */,
 				BEED56B22BAAAFD2009FA1A8 /* Route.swift in Sources */,
+				BEE288CE2BAC8C76002714F1 /* ActiveRouteMapView.swift in Sources */,
 				BEED569E2BAAAE9F009FA1A8 /* CircuiTecApp.swift in Sources */,
+				BE2D78D32BAC8E480096BAF7 /* ActiveRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
