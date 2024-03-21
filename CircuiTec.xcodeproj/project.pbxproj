@@ -16,7 +16,42 @@
 		BEED56B22BAAAFD2009FA1A8 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B12BAAAFD2009FA1A8 /* Route.swift */; };
 		BEED56B62BAB3E4B009FA1A8 /* RouteMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B52BAB3E4B009FA1A8 /* RouteMapView.swift */; };
 		BEED56B82BAB48E4009FA1A8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B72BAB48E4009FA1A8 /* MainView.swift */; };
+		BEED56BA2BAB5C63009FA1A8 /* RouteProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B92BAB5C63009FA1A8 /* RouteProgressView.swift */; };
+		BEED56C22BAB5E7F009FA1A8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEED56C12BAB5E7F009FA1A8 /* WidgetKit.framework */; };
+		BEED56C42BAB5E7F009FA1A8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEED56C32BAB5E7F009FA1A8 /* SwiftUI.framework */; };
+		BEED56C72BAB5E7F009FA1A8 /* LiveRouteBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56C62BAB5E7F009FA1A8 /* LiveRouteBundle.swift */; };
+		BEED56C92BAB5E7F009FA1A8 /* LiveRouteLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56C82BAB5E7F009FA1A8 /* LiveRouteLiveActivity.swift */; };
+		BEED56CB2BAB5E7F009FA1A8 /* LiveRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56CA2BAB5E7F009FA1A8 /* LiveRoute.swift */; };
+		BEED56CD2BAB5E7F009FA1A8 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56CC2BAB5E7F009FA1A8 /* AppIntent.swift */; };
+		BEED56CF2BAB5E80009FA1A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEED56CE2BAB5E80009FA1A8 /* Assets.xcassets */; };
+		BEED56D32BAB5E80009FA1A8 /* LiveRouteExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BEED56BF2BAB5E7F009FA1A8 /* LiveRouteExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BEED56D82BAB608F009FA1A8 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B12BAAAFD2009FA1A8 /* Route.swift */; };
+		BEED56D92BAB60A8009FA1A8 /* RouteProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B92BAB5C63009FA1A8 /* RouteProgressView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEED56D12BAB5E80009FA1A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEED56922BAAAE9F009FA1A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEED56BE2BAB5E7F009FA1A8;
+			remoteInfo = LiveRouteExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BEED56D72BAB5E80009FA1A8 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BEED56D32BAB5E80009FA1A8 /* LiveRouteExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BEED569A2BAAAE9F009FA1A8 /* CircuiTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircuiTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +64,16 @@
 		BEED56B12BAAAFD2009FA1A8 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		BEED56B52BAB3E4B009FA1A8 /* RouteMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapView.swift; sourceTree = "<group>"; };
 		BEED56B72BAB48E4009FA1A8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		BEED56B92BAB5C63009FA1A8 /* RouteProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteProgressView.swift; sourceTree = "<group>"; };
+		BEED56BF2BAB5E7F009FA1A8 /* LiveRouteExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LiveRouteExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEED56C12BAB5E7F009FA1A8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BEED56C32BAB5E7F009FA1A8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		BEED56C62BAB5E7F009FA1A8 /* LiveRouteBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRouteBundle.swift; sourceTree = "<group>"; };
+		BEED56C82BAB5E7F009FA1A8 /* LiveRouteLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRouteLiveActivity.swift; sourceTree = "<group>"; };
+		BEED56CA2BAB5E7F009FA1A8 /* LiveRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRoute.swift; sourceTree = "<group>"; };
+		BEED56CC2BAB5E7F009FA1A8 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		BEED56CE2BAB5E80009FA1A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEED56D02BAB5E80009FA1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +84,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEED56BC2BAB5E7F009FA1A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEED56C42BAB5E7F009FA1A8 /* SwiftUI.framework in Frameworks */,
+				BEED56C22BAB5E7F009FA1A8 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				BEED569C2BAAAE9F009FA1A8 /* CircuiTec */,
+				BEED56C52BAB5E7F009FA1A8 /* LiveRoute */,
+				BEED56C02BAB5E7F009FA1A8 /* Frameworks */,
 				BEED569B2BAAAE9F009FA1A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				BEED569A2BAAAE9F009FA1A8 /* CircuiTec.app */,
+				BEED56BF2BAB5E7F009FA1A8 /* LiveRouteExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +143,7 @@
 				BEED56AE2BAAAF9E009FA1A8 /* AllRoutesView.swift */,
 				BEED56B52BAB3E4B009FA1A8 /* RouteMapView.swift */,
 				BEED56B72BAB48E4009FA1A8 /* MainView.swift */,
+				BEED56B92BAB5C63009FA1A8 /* RouteProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,6 +156,28 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BEED56C02BAB5E7F009FA1A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEED56C12BAB5E7F009FA1A8 /* WidgetKit.framework */,
+				BEED56C32BAB5E7F009FA1A8 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEED56C52BAB5E7F009FA1A8 /* LiveRoute */ = {
+			isa = PBXGroup;
+			children = (
+				BEED56C62BAB5E7F009FA1A8 /* LiveRouteBundle.swift */,
+				BEED56C82BAB5E7F009FA1A8 /* LiveRouteLiveActivity.swift */,
+				BEED56CA2BAB5E7F009FA1A8 /* LiveRoute.swift */,
+				BEED56CC2BAB5E7F009FA1A8 /* AppIntent.swift */,
+				BEED56CE2BAB5E80009FA1A8 /* Assets.xcassets */,
+				BEED56D02BAB5E80009FA1A8 /* Info.plist */,
+			);
+			path = LiveRoute;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -108,15 +188,34 @@
 				BEED56962BAAAE9F009FA1A8 /* Sources */,
 				BEED56972BAAAE9F009FA1A8 /* Frameworks */,
 				BEED56982BAAAE9F009FA1A8 /* Resources */,
+				BEED56D72BAB5E80009FA1A8 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BEED56D22BAB5E80009FA1A8 /* PBXTargetDependency */,
 			);
 			name = CircuiTec;
 			productName = CircuiTec;
 			productReference = BEED569A2BAAAE9F009FA1A8 /* CircuiTec.app */;
 			productType = "com.apple.product-type.application";
+		};
+		BEED56BE2BAB5E7F009FA1A8 /* LiveRouteExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEED56D42BAB5E80009FA1A8 /* Build configuration list for PBXNativeTarget "LiveRouteExtension" */;
+			buildPhases = (
+				BEED56BB2BAB5E7F009FA1A8 /* Sources */,
+				BEED56BC2BAB5E7F009FA1A8 /* Frameworks */,
+				BEED56BD2BAB5E7F009FA1A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiveRouteExtension;
+			productName = LiveRouteExtension;
+			productReference = BEED56BF2BAB5E7F009FA1A8 /* LiveRouteExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -129,6 +228,9 @@
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					BEED56992BAAAE9F009FA1A8 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					BEED56BE2BAB5E7F009FA1A8 = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -147,6 +249,7 @@
 			projectRoot = "";
 			targets = (
 				BEED56992BAAAE9F009FA1A8 /* CircuiTec */,
+				BEED56BE2BAB5E7F009FA1A8 /* LiveRouteExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -161,6 +264,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEED56BD2BAB5E7F009FA1A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEED56CF2BAB5E80009FA1A8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -169,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEED56AF2BAAAF9E009FA1A8 /* AllRoutesView.swift in Sources */,
+				BEED56BA2BAB5C63009FA1A8 /* RouteProgressView.swift in Sources */,
 				BEED56B82BAB48E4009FA1A8 /* MainView.swift in Sources */,
 				BEED56A02BAAAE9F009FA1A8 /* ContentView.swift in Sources */,
 				BEED56B62BAB3E4B009FA1A8 /* RouteMapView.swift in Sources */,
@@ -178,7 +290,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEED56BB2BAB5E7F009FA1A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEED56CB2BAB5E7F009FA1A8 /* LiveRoute.swift in Sources */,
+				BEED56CD2BAB5E7F009FA1A8 /* AppIntent.swift in Sources */,
+				BEED56C92BAB5E7F009FA1A8 /* LiveRouteLiveActivity.swift in Sources */,
+				BEED56D92BAB60A8009FA1A8 /* RouteProgressView.swift in Sources */,
+				BEED56D82BAB608F009FA1A8 /* Route.swift in Sources */,
+				BEED56C72BAB5E7F009FA1A8 /* LiveRouteBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEED56D22BAB5E80009FA1A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEED56BE2BAB5E7F009FA1A8 /* LiveRouteExtension */;
+			targetProxy = BEED56D12BAB5E80009FA1A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		BEED56A82BAAAEA0009FA1A8 /* Debug */ = {
@@ -303,6 +436,7 @@
 		BEED56AB2BAAAEA0009FA1A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +445,7 @@
 				DEVELOPMENT_TEAM = 2JWSBNAJCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -333,6 +468,7 @@
 		BEED56AC2BAAAEA0009FA1A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -341,6 +477,7 @@
 				DEVELOPMENT_TEAM = 2JWSBNAJCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -354,6 +491,60 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tec.CircuiTec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BEED56D52BAB5E80009FA1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2JWSBNAJCH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiveRoute/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LiveRoute;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tec.CircuiTec.LiveRoute;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BEED56D62BAB5E80009FA1A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2JWSBNAJCH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiveRoute/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LiveRoute;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tec.CircuiTec.LiveRoute;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -377,6 +568,15 @@
 			buildConfigurations = (
 				BEED56AB2BAAAEA0009FA1A8 /* Debug */,
 				BEED56AC2BAAAEA0009FA1A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEED56D42BAB5E80009FA1A8 /* Build configuration list for PBXNativeTarget "LiveRouteExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEED56D52BAB5E80009FA1A8 /* Debug */,
+				BEED56D62BAB5E80009FA1A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
