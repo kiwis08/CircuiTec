@@ -51,7 +51,7 @@ struct FirstView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
+            ScrollView {
                 
                 //Barra de busqueda
                 HStack {
@@ -137,6 +137,7 @@ struct FirstView: View {
                 
             }
             .navigationTitle("¡Hola!")
+            .navigationBarTitleDisplayMode(.large)
             
         }
     }
