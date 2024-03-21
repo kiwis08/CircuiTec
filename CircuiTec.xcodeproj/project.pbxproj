@@ -35,6 +35,7 @@
 		BEED56D32BAB5E80009FA1A8 /* LiveRouteExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BEED56BF2BAB5E7F009FA1A8 /* LiveRouteExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BEED56D92BAB60A8009FA1A8 /* RouteProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B92BAB5C63009FA1A8 /* RouteProgressView.swift */; };
 		FB9131C62BAC9420009719FD /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9131C52BAC9420009719FD /* FirstView.swift */; };
+		FB9131C82BACEE81009719FD /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9131C72BACEE81009719FD /* FavoriteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		BEED56CE2BAB5E80009FA1A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEED56D02BAB5E80009FA1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB9131C52BAC9420009719FD /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		FB9131C72BACEE81009719FD /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				BEED56AD2BAAAF19009FA1A8 /* Views */,
 				BEED569D2BAAAE9F009FA1A8 /* CircuiTecApp.swift */,
 				FB9131C52BAC9420009719FD /* FirstView.swift */,
+				FB9131C72BACEE81009719FD /* FavoriteView.swift */,
 				BEED569F2BAAAE9F009FA1A8 /* ContentView.swift */,
 				BEED56A12BAAAE9F009FA1A8 /* Item.swift */,
 				BEED56A32BAAAEA0009FA1A8 /* Assets.xcassets */,
@@ -300,6 +303,7 @@
 			files = (
 				BEED56AF2BAAAF9E009FA1A8 /* AllRoutesView.swift in Sources */,
 				BEED56BA2BAB5C63009FA1A8 /* RouteProgressView.swift in Sources */,
+				FB9131C82BACEE81009719FD /* FavoriteView.swift in Sources */,
 				BEED56B82BAB48E4009FA1A8 /* MainView.swift in Sources */,
 				BEED56A02BAAAE9F009FA1A8 /* ContentView.swift in Sources */,
 				BEED56B62BAB3E4B009FA1A8 /* RouteMapView.swift in Sources */,
