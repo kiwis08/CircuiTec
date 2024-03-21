@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		BE2D78D32BAC8E480096BAF7 /* ActiveRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D78D22BAC8E480096BAF7 /* ActiveRoute.swift */; };
 		BE2D78D42BAC91390096BAF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEED56CE2BAB5E80009FA1A8 /* Assets.xcassets */; };
+		BE2D78D62BACA4940096BAF7 /* RouteStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D78D52BACA4940096BAF7 /* RouteStop.swift */; };
+		BE2D78D82BACA52F0096BAF7 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D78D72BACA52F0096BAF7 /* Coordinate.swift */; };
+		BE7505252BACA7B40051C567 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B12BAAAFD2009FA1A8 /* Route.swift */; };
+		BE7505262BACA7B70051C567 /* RouteStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D78D52BACA4940096BAF7 /* RouteStop.swift */; };
+		BE7505272BACA7B90051C567 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D78D72BACA52F0096BAF7 /* Coordinate.swift */; };
 		BEE288CE2BAC8C76002714F1 /* ActiveRouteMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE288CD2BAC8C76002714F1 /* ActiveRouteMapView.swift */; };
 		BEED569E2BAAAE9F009FA1A8 /* CircuiTecApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED569D2BAAAE9F009FA1A8 /* CircuiTecApp.swift */; };
 		BEED56A02BAAAE9F009FA1A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED569F2BAAAE9F009FA1A8 /* ContentView.swift */; };
@@ -28,7 +33,6 @@
 		BEED56CD2BAB5E7F009FA1A8 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56CC2BAB5E7F009FA1A8 /* AppIntent.swift */; };
 		BEED56CF2BAB5E80009FA1A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEED56CE2BAB5E80009FA1A8 /* Assets.xcassets */; };
 		BEED56D32BAB5E80009FA1A8 /* LiveRouteExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BEED56BF2BAB5E7F009FA1A8 /* LiveRouteExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		BEED56D82BAB608F009FA1A8 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B12BAAAFD2009FA1A8 /* Route.swift */; };
 		BEED56D92BAB60A8009FA1A8 /* RouteProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B92BAB5C63009FA1A8 /* RouteProgressView.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +62,8 @@
 
 /* Begin PBXFileReference section */
 		BE2D78D22BAC8E480096BAF7 /* ActiveRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRoute.swift; sourceTree = "<group>"; };
+		BE2D78D52BACA4940096BAF7 /* RouteStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteStop.swift; sourceTree = "<group>"; };
+		BE2D78D72BACA52F0096BAF7 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		BEE288CD2BAC8C76002714F1 /* ActiveRouteMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRouteMapView.swift; sourceTree = "<group>"; };
 		BEED569A2BAAAE9F009FA1A8 /* CircuiTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircuiTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEED569D2BAAAE9F009FA1A8 /* CircuiTecApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuiTecApp.swift; sourceTree = "<group>"; };
@@ -159,6 +165,8 @@
 			children = (
 				BEED56B12BAAAFD2009FA1A8 /* Route.swift */,
 				BE2D78D22BAC8E480096BAF7 /* ActiveRoute.swift */,
+				BE2D78D52BACA4940096BAF7 /* RouteStop.swift */,
+				BE2D78D72BACA52F0096BAF7 /* Coordinate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +305,8 @@
 				BEE288CE2BAC8C76002714F1 /* ActiveRouteMapView.swift in Sources */,
 				BEED569E2BAAAE9F009FA1A8 /* CircuiTecApp.swift in Sources */,
 				BE2D78D32BAC8E480096BAF7 /* ActiveRoute.swift in Sources */,
+				BE2D78D62BACA4940096BAF7 /* RouteStop.swift in Sources */,
+				BE2D78D82BACA52F0096BAF7 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,11 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE7505262BACA7B70051C567 /* RouteStop.swift in Sources */,
 				BEED56CB2BAB5E7F009FA1A8 /* LiveRoute.swift in Sources */,
 				BEED56CD2BAB5E7F009FA1A8 /* AppIntent.swift in Sources */,
+				BE7505272BACA7B90051C567 /* Coordinate.swift in Sources */,
 				BEED56C92BAB5E7F009FA1A8 /* LiveRouteLiveActivity.swift in Sources */,
+				BE7505252BACA7B40051C567 /* Route.swift in Sources */,
 				BEED56D92BAB60A8009FA1A8 /* RouteProgressView.swift in Sources */,
-				BEED56D82BAB608F009FA1A8 /* Route.swift in Sources */,
 				BEED56C72BAB5E7F009FA1A8 /* LiveRouteBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
