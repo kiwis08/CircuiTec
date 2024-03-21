@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33F4BC8B2BAB6177002C2E03 /* RouteActiveMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F4BC8A2BAB6177002C2E03 /* RouteActiveMap.swift */; };
 		BEED569E2BAAAE9F009FA1A8 /* CircuiTecApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED569D2BAAAE9F009FA1A8 /* CircuiTecApp.swift */; };
 		BEED56A02BAAAE9F009FA1A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED569F2BAAAE9F009FA1A8 /* ContentView.swift */; };
 		BEED56A22BAAAE9F009FA1A8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56A12BAAAE9F009FA1A8 /* Item.swift */; };
@@ -20,7 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		33F4BC8A2BAB6177002C2E03 /* RouteActiveMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouteActiveMap.swift; path = "../../../../../Downloads/CircuiTec-main/CircuiTec/Views/RouteActiveMap.swift"; sourceTree = "<group>"; };
 		BEED569A2BAAAE9F009FA1A8 /* CircuiTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircuiTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEED569D2BAAAE9F009FA1A8 /* CircuiTecApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuiTecApp.swift; sourceTree = "<group>"; };
 		BEED569F2BAAAE9F009FA1A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				BEED56AE2BAAAF9E009FA1A8 /* AllRoutesView.swift */,
-				33F4BC8A2BAB6177002C2E03 /* RouteActiveMap.swift */,
 				BEED56B52BAB3E4B009FA1A8 /* RouteMapView.swift */,
 				BEED56B72BAB48E4009FA1A8 /* MainView.swift */,
 			);
@@ -171,7 +168,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33F4BC8B2BAB6177002C2E03 /* RouteActiveMap.swift in Sources */,
 				BEED56AF2BAAAF9E009FA1A8 /* AllRoutesView.swift in Sources */,
 				BEED56B82BAB48E4009FA1A8 /* MainView.swift in Sources */,
 				BEED56A02BAAAE9F009FA1A8 /* ContentView.swift in Sources */,
