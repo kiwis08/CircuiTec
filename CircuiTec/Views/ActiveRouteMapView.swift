@@ -10,7 +10,7 @@ import MapKit
 
 struct ActiveRouteMapView: View {
     @Environment(\.dismiss) private var dismiss
-    @Binding var activeRoute: ActiveRoute
+    @EnvironmentObject var viewModel: ActiveRouteViewModel
     
     @State private var mapRoutes: [MKRoute] = []
     
@@ -22,7 +22,7 @@ struct ActiveRouteMapView: View {
     
     var body: some View {
         Map {
-            ForEach(activeRoute.route.stops, id: \.self) { stop in
+            ForEach(viewModel.activeRoute!.route.stops, id: \.self) { stop in
                 Annotation(stop.name, coordinate: stop.coordinates.CLCoordinate) {
                     Image(systemName: "figure.wave")
                         .padding(4)
@@ -43,7 +43,7 @@ struct ActiveRouteMapView: View {
                     Image(systemName: "bus.fill")
                         .padding(4)
                         .foregroundStyle(.white)
-                        .background(Color("Bus\(activeRoute.route.color.rawValue.capitalized)"))
+                        .background(Color("Bus\(viewModel.activeRoute!.route.color.rawValue.capitalized)"))
                         .cornerRadius(4)
                 }
             }
@@ -54,10 +54,10 @@ struct ActiveRouteMapView: View {
                         HStack {
                             ZStack {
                                 Circle()
-                                    .fill(Color("Bus\(activeRoute.route.color.rawValue.capitalized)"))
+                                    .fill(Color("Bus\(viewModel.activeRoute!.route.color.rawValue.capitalized)"))
                                     .frame(width: 50, height: 50)
                                 VStack(spacing: 0) {
-                                    Text("\(activeRoute.timeLeft)")
+                                    Text("\(viewModel.activeRoute!.timeLeft)")
                                         .font(.title)
                                         .foregroundStyle(.white)
                                         .padding(.vertical, -5)
@@ -67,7 +67,7 @@ struct ActiveRouteMapView: View {
                                 }
                                 .bold()
                             }
-                            Text(activeRoute.route.name)
+                            Text(viewModel.activeRoute!.route.name)
                                 .font(.title)
                                 .bold()
                                 .fixedSize(horizontal: false, vertical: true)
@@ -90,7 +90,7 @@ struct ActiveRouteMapView: View {
                             Text("Asientos disponibles")
                                 .bold()
                             Spacer()
-                            Text("\(activeRoute.availableSeats)")
+                            Text("\(viewModel.activeRoute!.availableSeats)")
                                 .bold()
                         }
                         .padding(.horizontal)
@@ -107,7 +107,7 @@ struct ActiveRouteMapView: View {
                         Spacer()
                         
                         HStack {
-                            RouteProgressView(orientation: .vertical, color: Color("Bus\(activeRoute.route.color.rawValue.capitalized)"))
+                            RouteProgressView(orientation: .vertical, color: Color("Bus\(viewModel.activeRoute!.route.color.rawValue.capitalized)"))
                                 .frame(width: geo.size.width / 4)
                             Spacer()
                         }
@@ -121,7 +121,7 @@ struct ActiveRouteMapView: View {
             .toolbar(.hidden)
             .task {
                 routesLoaded = false
-                mapRoutes = await activeRoute.route.getMKRoutes()
+                mapRoutes = await viewModel.activeRoute!.route.getMKRoutes()
                 routesLoaded = true
                 simulateBusMovementAlongRoute()
             }
@@ -167,5 +167,5 @@ struct ActiveRouteMapView: View {
 }
 
 #Preview {
-    ActiveRouteMapView(activeRoute: .constant(ActiveRoute(route: Route.samples.last!, availableSeats: 10, timeLeft: 8)))
+    ActiveRouteMapView()
 }

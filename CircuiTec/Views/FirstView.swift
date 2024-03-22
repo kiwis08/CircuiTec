@@ -11,43 +11,7 @@ import UIKit
 import CoreLocation
 
 struct FirstView: View {
-    
-    func card(imageName: String, title: String, subtitle: String) -> some View {
-        VStack(spacing: 16.0) {
-            Image(imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 70, height: 40)
-                .padding(.top)
-            
-            //Card
-            VStack(alignment: .leading, spacing: 3) {
-                Text(title)
-                    .font(.headline)
-
-                Text(subtitle)
-                    .font(.footnote)
-                    .foregroundColor(.gray)
-                    .padding(.bottom)
-
-            }
-            .padding(.horizontal, 5)
-
-            
-        }
-        .frame(width: 110, height: 120)
-        .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 10.0))
-        .shadow(radius: 6)
-        .padding(.horizontal, 2)
-        .padding(.vertical)
-    }
-    
-    
-    
-
-    
-    
+    @EnvironmentObject var viewModel: ActiveRouteViewModel
     
     var body: some View {
         NavigationStack {
@@ -74,16 +38,16 @@ struct FirstView: View {
                 .shadow(radius: 10)
                 .padding(.horizontal, 2)
                 .padding(.vertical)
-            
                 
-                           
-                           
+                
+                
+                
                 // Mapa
                 VStack {
                     HStack {
                         Text("Parada más cercana")
                             .font(.headline)
-                        .multilineTextAlignment(.leading)
+                            .multilineTextAlignment(.leading)
                         Spacer()
                     }
                     .padding(.horizontal, 20)
@@ -93,7 +57,7 @@ struct FirstView: View {
                         .frame(width:350, height: 200)
                         .clipShape(RoundedRectangle(cornerRadius: 10.0))
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                    .padding(.bottom, 10)
+                        .padding(.bottom, 10)
                 }
                 
                 
@@ -104,28 +68,32 @@ struct FirstView: View {
                         .multilineTextAlignment(.leading)
                     Spacer()
                     Button(action: {
-                                // Acción que quieres que ocurra cuando se presiona el botón
-                                print("Botón presionado")
-                            }) {
-                                Image(systemName: "plus.circle")
-                                    .padding(.horizontal)
-                            }
+                        // Acción que quieres que ocurra cuando se presiona el botón
+                        print("Botón presionado")
+                    }) {
+                        Image(systemName: "plus.circle")
+                            .padding(.horizontal)
+                    }
                 }
                 .padding(.horizontal, 20)
                 .padding(.bottom, 20)
                 .padding(.top, 20)
-
-                    
+                
+                if viewModel.isFollowingRoute {
+                    Text("Following route: \(viewModel.activeRoute!.route.name)")
+                }
+                
+                
                 
                 //Cards
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        card(imageName: "revolucion", title: "Parada", subtitle: "Nuevo Sur")
-                        card(imageName: "casa", title: "Casa", subtitle: "Lazaro cárdenas #2525")
-                        card(imageName: "tienda", title: "Walmart las Torres", subtitle: "Eugenio Garza Sada 6110")
-                        card(imageName: "garza sada", title: "IMSS Clínica 33", subtitle: "Ruta Garza Sada")
-                        card(imageName: "hospitales", title: "Oxxo Río Pánuco", subtitle: "Ruta Hospitales y Escuelas")
-                        card(imageName: "mapa", title: "Casa Dani", subtitle: "Junco de la Vega #2443")
+                        FavoriteLocationCard(favoriteLoc: FavoriteLocation(name: "Parada", address: "Nuevo Sur", image: "revolucion"))
+                        FavoriteLocationCard(favoriteLoc: FavoriteLocation(name: "Walmart Las Torres", address: "Eugenio Garza Sada 6110", image: "tienda"))
+                        FavoriteLocationCard(favoriteLoc: FavoriteLocation(name: "IMSS Clínica 33", address: "Ruta Garza Sada 6110", image: "garza sada"))
+                        FavoriteLocationCard(favoriteLoc: FavoriteLocation(name: "Oxxo Río Pánuco", address: "Nuevo Sur", image: "hospitales"))
+                        FavoriteLocationCard(favoriteLoc: FavoriteLocation(name: "Casa Dani", address: "Junco de la Vega #2443", image: "mapa"))
+                        FavoriteLocationCard(favoriteLoc: FavoriteLocation(name: "Casa", address: "Nuevo Sur", image: "casa"))
                     }
                 }
                 .frame(height: 100)
@@ -133,7 +101,7 @@ struct FirstView: View {
                 .padding(.horizontal, 10)
                 
                 Spacer()
-            
+                
                 
             }
             .navigationTitle("¡Hola!")
@@ -141,9 +109,6 @@ struct FirstView: View {
             
         }
     }
-    
-    
-    
 }
 
 #Preview {

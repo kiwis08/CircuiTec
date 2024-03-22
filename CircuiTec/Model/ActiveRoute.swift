@@ -7,8 +7,14 @@
 
 import Foundation
 
-struct ActiveRoute {
+class ActiveRoute: ObservableObject {
     let route: Route
-    var availableSeats: Int
-    var timeLeft: Int
+    @Published var availableSeats: Int
+    @Published var timeLeft: Int
+
+    init(route: Route, availableSeats: Int, timeLeft: Int) {
+        self.route = route
+        self.availableSeats = availableSeats
+        self.timeLeft = timeLeft
+    }
 }

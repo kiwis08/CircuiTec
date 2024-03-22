@@ -10,7 +10,6 @@ import SwiftData
 
 @main
 struct CircuiTecApp: App {
-//    @ObservedObject var router = Route
     
     
     var sharedModelContainer: ModelContainer = {

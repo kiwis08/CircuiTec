@@ -10,6 +10,7 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
+    @StateObject private var viewModel = ActiveRouteViewModel()
     
     @State private var navigationPath = NavigationPath()
     
@@ -24,6 +25,7 @@ struct ContentView: View {
                     Label("Rutas", systemImage: "bus")
                 }
         }
+        .environmentObject(viewModel)
     }
 }
 

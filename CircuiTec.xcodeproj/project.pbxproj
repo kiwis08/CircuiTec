@@ -14,6 +14,9 @@
 		BE7505252BACA7B40051C567 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B12BAAAFD2009FA1A8 /* Route.swift */; };
 		BE7505262BACA7B70051C567 /* RouteStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D78D52BACA4940096BAF7 /* RouteStop.swift */; };
 		BE7505272BACA7B90051C567 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D78D72BACA52F0096BAF7 /* Coordinate.swift */; };
+		BE7505292BACEA6D0051C567 /* FavoriteLocationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7505282BACEA6D0051C567 /* FavoriteLocationCard.swift */; };
+		BE75052B2BACEA7F0051C567 /* FavoriteLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE75052A2BACEA7F0051C567 /* FavoriteLocation.swift */; };
+		BE7505302BACF0FE0051C567 /* ActiveRouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE75052F2BACF0FE0051C567 /* ActiveRouteViewModel.swift */; };
 		BEE288CE2BAC8C76002714F1 /* ActiveRouteMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE288CD2BAC8C76002714F1 /* ActiveRouteMapView.swift */; };
 		BEED569E2BAAAE9F009FA1A8 /* CircuiTecApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED569D2BAAAE9F009FA1A8 /* CircuiTecApp.swift */; };
 		BEED56A02BAAAE9F009FA1A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED569F2BAAAE9F009FA1A8 /* ContentView.swift */; };
@@ -23,7 +26,6 @@
 		BEED56AF2BAAAF9E009FA1A8 /* AllRoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56AE2BAAAF9E009FA1A8 /* AllRoutesView.swift */; };
 		BEED56B22BAAAFD2009FA1A8 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B12BAAAFD2009FA1A8 /* Route.swift */; };
 		BEED56B62BAB3E4B009FA1A8 /* RouteMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B52BAB3E4B009FA1A8 /* RouteMapView.swift */; };
-		BEED56B82BAB48E4009FA1A8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B72BAB48E4009FA1A8 /* MainView.swift */; };
 		BEED56BA2BAB5C63009FA1A8 /* RouteProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B92BAB5C63009FA1A8 /* RouteProgressView.swift */; };
 		BEED56C22BAB5E7F009FA1A8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEED56C12BAB5E7F009FA1A8 /* WidgetKit.framework */; };
 		BEED56C42BAB5E7F009FA1A8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEED56C32BAB5E7F009FA1A8 /* SwiftUI.framework */; };
@@ -66,6 +68,9 @@
 		BE2D78D22BAC8E480096BAF7 /* ActiveRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRoute.swift; sourceTree = "<group>"; };
 		BE2D78D52BACA4940096BAF7 /* RouteStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteStop.swift; sourceTree = "<group>"; };
 		BE2D78D72BACA52F0096BAF7 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		BE7505282BACEA6D0051C567 /* FavoriteLocationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLocationCard.swift; sourceTree = "<group>"; };
+		BE75052A2BACEA7F0051C567 /* FavoriteLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLocation.swift; sourceTree = "<group>"; };
+		BE75052F2BACF0FE0051C567 /* ActiveRouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRouteViewModel.swift; sourceTree = "<group>"; };
 		BEE288CD2BAC8C76002714F1 /* ActiveRouteMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRouteMapView.swift; sourceTree = "<group>"; };
 		BEED569A2BAAAE9F009FA1A8 /* CircuiTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircuiTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEED569D2BAAAE9F009FA1A8 /* CircuiTecApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuiTecApp.swift; sourceTree = "<group>"; };
@@ -76,7 +81,6 @@
 		BEED56AE2BAAAF9E009FA1A8 /* AllRoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRoutesView.swift; sourceTree = "<group>"; };
 		BEED56B12BAAAFD2009FA1A8 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		BEED56B52BAB3E4B009FA1A8 /* RouteMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapView.swift; sourceTree = "<group>"; };
-		BEED56B72BAB48E4009FA1A8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BEED56B92BAB5C63009FA1A8 /* RouteProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteProgressView.swift; sourceTree = "<group>"; };
 		BEED56BF2BAB5E7F009FA1A8 /* LiveRouteExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LiveRouteExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEED56C12BAB5E7F009FA1A8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -111,6 +115,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE7505312BACF1C10051C567 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BE75052F2BACF0FE0051C567 /* ActiveRouteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		BEED56912BAAAE9F009FA1A8 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +154,7 @@
 				BEED56A12BAAAE9F009FA1A8 /* Item.swift */,
 				BEED56A32BAAAEA0009FA1A8 /* Assets.xcassets */,
 				BEED56A52BAAAEA0009FA1A8 /* Preview Content */,
+				BE7505312BACF1C10051C567 /* ViewModel */,
 			);
 			path = CircuiTec;
 			sourceTree = "<group>";
@@ -157,11 +170,12 @@
 		BEED56AD2BAAAF19009FA1A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FB9131C52BAC9420009719FD /* FirstView.swift */,
 				BEE288CD2BAC8C76002714F1 /* ActiveRouteMapView.swift */,
 				BEED56AE2BAAAF9E009FA1A8 /* AllRoutesView.swift */,
 				BEED56B52BAB3E4B009FA1A8 /* RouteMapView.swift */,
-				BEED56B72BAB48E4009FA1A8 /* MainView.swift */,
 				BEED56B92BAB5C63009FA1A8 /* RouteProgressView.swift */,
+				BE7505282BACEA6D0051C567 /* FavoriteLocationCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +187,7 @@
 				BE2D78D22BAC8E480096BAF7 /* ActiveRoute.swift */,
 				BE2D78D52BACA4940096BAF7 /* RouteStop.swift */,
 				BE2D78D72BACA52F0096BAF7 /* Coordinate.swift */,
+				BE75052A2BACEA7F0051C567 /* FavoriteLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,13 +323,16 @@
 				BEED56A02BAAAE9F009FA1A8 /* ContentView.swift in Sources */,
 				BEED56B62BAB3E4B009FA1A8 /* RouteMapView.swift in Sources */,
 				BEED56A22BAAAE9F009FA1A8 /* Item.swift in Sources */,
+				BE7505302BACF0FE0051C567 /* ActiveRouteViewModel.swift in Sources */,
 				BEED56B22BAAAFD2009FA1A8 /* Route.swift in Sources */,
 				BEE288CE2BAC8C76002714F1 /* ActiveRouteMapView.swift in Sources */,
+				BE7505292BACEA6D0051C567 /* FavoriteLocationCard.swift in Sources */,
 				BEED569E2BAAAE9F009FA1A8 /* CircuiTecApp.swift in Sources */,
 				FB9131C62BAC9420009719FD /* FirstView.swift in Sources */,
 				BE2D78D32BAC8E480096BAF7 /* ActiveRoute.swift in Sources */,
 				BE2D78D62BACA4940096BAF7 /* RouteStop.swift in Sources */,
 				BE2D78D82BACA52F0096BAF7 /* Coordinate.swift in Sources */,
+				BE75052B2BACEA7F0051C567 /* FavoriteLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
