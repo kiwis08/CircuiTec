@@ -135,8 +135,6 @@ struct FirstView: View {
             .task {
                 if viewModel.isFollowingRoute {
                     mapRoutes = await viewModel.activeRoute!.route.getMKRoutes()
-                } else {
-                    await activityManager.cancelAllRunningActivities()
                 }
             }
             .navigationTitle("Bienvenido")
