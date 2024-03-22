@@ -11,6 +11,7 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @StateObject private var viewModel = ActiveRouteViewModel()
+    @StateObject private var locationManager = LocationManager()
     
     @State private var navigationPath = NavigationPath()
     
@@ -25,7 +26,12 @@ struct ContentView: View {
                     Label("Rutas", systemImage: "bus")
                 }
         }
+        .onAppear {
+            viewModel.favoriteStops.append(FavoriteStop(stop: viewModel.allRoutes.first!.stops.first!, address: "Plaza Nuevo Sur", image: "revolucion"))
+            viewModel.favoriteStops.append(FavoriteStop(stop: viewModel.allRoutes.last!.stops[3], address: "Hospital", image: "garza sada"))
+        }
         .environmentObject(viewModel)
+        .environmentObject(locationManager)
     }
 }
 

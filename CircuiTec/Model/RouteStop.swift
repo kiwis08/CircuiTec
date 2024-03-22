@@ -9,6 +9,7 @@ import Foundation
 import MapKit
 
 struct RouteStop: Codable, Equatable, Hashable {
-    let name: String
-    let coordinates: Coordinate
+    var id: UUID = UUID()
+    var name: String
+    var coordinates: Coordinate
 }

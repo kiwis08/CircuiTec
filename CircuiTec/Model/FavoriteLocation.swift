@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct FavoriteLocation {
-    var name: String
+struct FavoriteStop {
+    var stop: RouteStop
     var address: String
     var image: String
 }

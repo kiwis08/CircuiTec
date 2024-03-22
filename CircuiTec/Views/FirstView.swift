@@ -12,6 +12,18 @@ import CoreLocation
 
 struct FirstView: View {
     @EnvironmentObject var viewModel: ActiveRouteViewModel
+    @EnvironmentObject var locationManager: LocationManager
+    
+    @StateObject private var activityManager = ActivityManager.shared
+    
+    @State var region = MKCoordinateRegion(
+        center: .init(latitude: 37.334_900,longitude: -122.009_020),
+        span: .init(latitudeDelta: 0.2, longitudeDelta: 0.2)
+    )
+    
+    @State private var mapRoutes = [MKRoute]()
+
+    
     
     var body: some View {
         NavigationStack {
@@ -52,12 +64,30 @@ struct FirstView: View {
                     }
                     .padding(.horizontal, 20)
                     
-                    Map()
+                    Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.follow))
                         .mapStyle(.standard)
-                        .frame(width:350, height: 200)
+                        .frame(height: 200)
                         .clipShape(RoundedRectangle(cornerRadius: 10.0))
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                        .padding(.bottom, 10)
+                        .padding()
+                    
+                    if viewModel.isFollowingRoute {
+                        NavigationLink {
+                            ActiveRouteMapView(mapRoutes: $mapRoutes)
+                        } label: {
+                            FollowingRouteCard(route: viewModel.activeRoute!.route)
+                        }
+                        .buttonStyle(.plain)
+                        .task {
+                            await activityManager.start(route: viewModel.activeRoute?.route ?? ActiveRouteViewModel.sampleRoutes.first!)
+                        }
+                        .onAppear {
+                            Task {
+                                await activityManager.updateActivityRandomly()
+                                print(activityManager.activityToken)
+                            }
+                        }
+                    }
                 }
                 
                 
@@ -79,21 +109,19 @@ struct FirstView: View {
                 .padding(.bottom, 20)
                 .padding(.top, 20)
                 
-                if viewModel.isFollowingRoute {
-                    Text("Following route: \(viewModel.activeRoute!.route.name)")
-                }
-                
                 
                 
                 //Cards
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        FavoriteLocationCard(favoriteLoc: FavoriteLocation(name: "Parada", address: "Nuevo Sur", image: "revolucion"))
-                        FavoriteLocationCard(favoriteLoc: FavoriteLocation(name: "Walmart Las Torres", address: "Eugenio Garza Sada 6110", image: "tienda"))
-                        FavoriteLocationCard(favoriteLoc: FavoriteLocation(name: "IMSS Clínica 33", address: "Ruta Garza Sada 6110", image: "garza sada"))
-                        FavoriteLocationCard(favoriteLoc: FavoriteLocation(name: "Oxxo Río Pánuco", address: "Nuevo Sur", image: "hospitales"))
-                        FavoriteLocationCard(favoriteLoc: FavoriteLocation(name: "Casa Dani", address: "Junco de la Vega #2443", image: "mapa"))
-                        FavoriteLocationCard(favoriteLoc: FavoriteLocation(name: "Casa", address: "Nuevo Sur", image: "casa"))
+                        ForEach(viewModel.favoriteStops, id: \.stop.id) { favorite in
+                            NavigationLink {
+                                FavoriteView(favoriteStop: favorite)
+                            } label: {
+                                FavoriteLocationCard(favoriteLoc: favorite)
+                            }
+                            .buttonStyle(.plain)
+                        }
                     }
                 }
                 .frame(height: 100)
@@ -104,7 +132,14 @@ struct FirstView: View {
                 
                 
             }
-            .navigationTitle("¡Hola!")
+            .task {
+                if viewModel.isFollowingRoute {
+                    mapRoutes = await viewModel.activeRoute!.route.getMKRoutes()
+                } else {
+                    await activityManager.cancelAllRunningActivities()
+                }
+            }
+            .navigationTitle("Bienvenido")
             .navigationBarTitleDisplayMode(.large)
             
         }
@@ -113,4 +148,5 @@ struct FirstView: View {
 
 #Preview {
     FirstView()
+        .environmentObject(ActiveRouteViewModel())
 }

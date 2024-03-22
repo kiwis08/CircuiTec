@@ -13,49 +13,12 @@ struct RouteMapView: View {
     
     var route: Route
     
-    @State private var mapRoutes: [MKRoute] = []
-    
-    @State private var routesLoaded = false
-    
-    
-    @State private var showActiveRouteMap = false
-    
-    @State private var showSheet = true
-    
-    @State private var busCurrentLocation: CLLocationCoordinate2D?
-    
-    @State private var currentCoordinateIndex = 0
+    @State private var mapRoutes = [MKRoute]()
     
     
     var body: some View {
-        Map {
-            ForEach(route.stops, id: \.self) { stop in
-                Annotation(stop.name, coordinate: stop.coordinates.CLCoordinate) {
-                    Image(systemName: "figure.wave")
-                        .padding(4)
-                        .foregroundStyle(.white)
-                        .background(Color.indigo)
-                        .cornerRadius(4)
-                }
-            }
-            if routesLoaded {
-                ForEach(mapRoutes, id: \.self) { mapRoute in
-                    MapPolyline(mapRoute)
-                        .stroke(Color.blue, lineWidth: 5.0)
-                }
-            }
-            
-            if let busLocation = busCurrentLocation {
-                Annotation("Bus Location", coordinate: busLocation, anchor: .bottom) {
-                    Image(systemName: "bus.fill")
-                        .padding(4)
-                        .foregroundStyle(.white)
-                        .background(Color("Bus\(route.color.rawValue.capitalized)"))
-                        .cornerRadius(4)
-                }
-            }
-        }
-        .sheet(isPresented: $showSheet, content: {
+        RouteMap(route: route, showBusLocation: true, mapRoutes: $mapRoutes)
+        .sheet(isPresented: .constant(true), content: {
             GeometryReader { geo in
                 VStack(alignment: .center) {
                     Spacer()
@@ -91,59 +54,14 @@ struct RouteMapView: View {
                 .interactiveDismissDisabled()
             }
         })
-        .toolbar(.hidden)
         .task {
-            showSheet = true
-            routesLoaded = false
             mapRoutes = await route.getMKRoutes()
-            simulateBusMovementAlongRoute()
-            routesLoaded = true
         }
-        .navigationDestination(isPresented: $showActiveRouteMap) {
-            ActiveRouteMapView()
-        }
+        .toolbar(.hidden)
     }
     
-    
-    private func simulateBusMovementAlongRoute() {
-        let routeCoordinates = extractCoordinates(from: mapRoutes)
-        
-        // Check if there are coordinates to follow
-        guard !routeCoordinates.isEmpty else { return }
-        
-        // Initialize bus location to the first coordinate
-        busCurrentLocation = routeCoordinates.first
-        
-        // Timer to update location along the route
-        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
-            // Increment the coordinate index to move to the next point
-            if currentCoordinateIndex < routeCoordinates.count - 1 {
-                currentCoordinateIndex += 1
-                busCurrentLocation = routeCoordinates[currentCoordinateIndex]
-            } else {
-                timer.invalidate() // Stop the timer when we reach the end of the route
-            }
-        }
-    }
-    
-    private func extractCoordinates(from routes: [MKRoute]) -> [CLLocationCoordinate2D] {
-        var coordinates = [CLLocationCoordinate2D]()
-        
-        for route in routes {
-            let polyline = route.polyline
-            let pointCount = polyline.pointCount
-            
-            // Extract the coordinates from the polyline
-            var routeCoordinates = [CLLocationCoordinate2D](repeating: kCLLocationCoordinate2DInvalid, count: pointCount)
-            polyline.getCoordinates(&routeCoordinates, range: NSRange(location: 0, length: pointCount))
-            
-            coordinates.append(contentsOf: routeCoordinates)
-        }
-        
-        return coordinates
-    }
 }
 
 #Preview {
-    RouteMapView(route: Route.samples.last!)
+    RouteMapView(route: ActiveRouteViewModel.sampleRoutes.last!)
 }

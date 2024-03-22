@@ -48,7 +48,7 @@ struct LiveRouteEntryView : View {
                     Text("Siguiendo Ruta Revolución")
                 }
             }
-            RouteProgressView(orientation: .horizontal, color: .red)
+//            RouteProgressView(orientation: .horizontal, color: .red)
         }
     }
 }

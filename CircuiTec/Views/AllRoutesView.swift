@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct AllRoutesView: View {
-    @Environment(\.modelContext) private var modelContext
+    @EnvironmentObject var viewModel: ActiveRouteViewModel
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(Route.samples) { route in
+                ForEach(viewModel.allRoutes) { route in
                     NavigationLink {
                         RouteMapView(route: route)
                     } label: {
@@ -31,7 +31,7 @@ struct AllRoutesView: View {
             .listStyle(.insetGrouped)
             .listRowBackground(Color.clear)
             .listRowSpacing(20)
-            .navigationTitle("Otras rutas")
+            .navigationTitle("Rutas")
             .navigationBarTitleDisplayMode(.large)
         }
         

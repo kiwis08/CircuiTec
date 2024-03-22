@@ -15,10 +15,9 @@ struct LiveRouteAttributes: ActivityAttributes {
         var status: CGFloat
         var timeLeft: Int
     }
-
+    
     // Fixed non-changing properties about your activity go here!
-    var name: String
-    var color: RouteColor
+    var route: Route
 }
 
 struct LiveRouteLiveActivity: Widget {
@@ -29,28 +28,45 @@ struct LiveRouteLiveActivity: Widget {
                 HStack {
                     VStack(alignment: .leading) {
                         Text("\(context.state.timeLeft) minutos hasta tu parada")
-                        Text("Siguiendo \(context.attributes.name)")
+                        Text("Siguiendo \(context.attributes.route.name)")
                     }
+                    Image("BusIcon\(context.attributes.route.color.rawValue.capitalized)")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .padding()
                 }
-                RouteProgressView(orientation: .horizontal, color: Color("Bus\(context.attributes.color.rawValue.capitalized)"))
-                    .frame(height: 20)
+                
+                RouteProgressView(orientation: .horizontal, color: Color("Bus\(context.attributes.route.color.rawValue.capitalized)"), route: context.attributes.route)
+                    .frame(height: 10)
                     .padding()
             }
-            .activityBackgroundTint(Color.cyan)
+            .padding()
+//            .activityBackgroundTint(Color.cyan)
             .activitySystemActionForegroundColor(Color.black)
-
+            
         } dynamicIsland: { context in
             DynamicIsland {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
+                    Image("BusIcon\(context.attributes.route.color.rawValue.capitalized)")
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text("Trailing")
+//                    Image("BusIcon\(context.attributes.route.color.rawValue.capitalized)")
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("Bottom \(context.state.status)")
+                    VStack {
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text("\(context.state.timeLeft) minutos hasta tu parada")
+                                Text("Siguiendo \(context.attributes.route.name)")
+                            }
+                        }
+                        
+                        RouteProgressView(orientation: .horizontal, color: Color("Bus\(context.attributes.route.color.rawValue.capitalized)"), route: context.attributes.route)
+                            .frame(height: 10)
+                            .padding()
+                    }
                     // more content
                 }
             } compactLeading: {
@@ -60,7 +76,7 @@ struct LiveRouteLiveActivity: Widget {
             } minimal: {
                 Text("\(context.state.status)")
             }
-            .widgetURL(URL(string: "http://www.apple.com"))
+//            .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
         }
     }
@@ -68,22 +84,22 @@ struct LiveRouteLiveActivity: Widget {
 
 extension LiveRouteAttributes {
     fileprivate static var preview: LiveRouteAttributes {
-        LiveRouteAttributes(name: "Ruta Revolución", color: .orange)
+        LiveRouteAttributes(route: ActiveRouteViewModel.sampleRoutes.first!)
     }
 }
 
 extension LiveRouteAttributes.ContentState {
     fileprivate static var smiley: LiveRouteAttributes.ContentState {
         LiveRouteAttributes.ContentState(status: 0.5, timeLeft: 15)
-     }
-     
-     fileprivate static var starEyes: LiveRouteAttributes.ContentState {
-         LiveRouteAttributes.ContentState(status: 0.9, timeLeft: 15)
-     }
+    }
+    
+    fileprivate static var starEyes: LiveRouteAttributes.ContentState {
+        LiveRouteAttributes.ContentState(status: 0.9, timeLeft: 15)
+    }
 }
 
 #Preview("Notification", as: .content, using: LiveRouteAttributes.preview) {
-   LiveRouteLiveActivity()
+    LiveRouteLiveActivity()
 } contentStates: {
     LiveRouteAttributes.ContentState.smiley
     LiveRouteAttributes.ContentState.starEyes

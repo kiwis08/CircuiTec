@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct RouteProgressView: View {
-    @State private var progress: CGFloat = 1
+    @State private var progress: CGFloat = 0.4
     var orientation: MilestoneProgressView.Orientation
     var color: Color
+    var route: Route
+    
     var body: some View {
-        MilestoneProgressView(progress: $progress, orientation: orientation, color: color)
+        MilestoneProgressView(progress: $progress, orientation: orientation, stops: route.stops, color: color)
     }
 }
 
@@ -23,11 +25,11 @@ struct MilestoneProgressView: View {
         case vertical
     }
     
-    @State private var radius: CGFloat = 15
+    @State private var radius: CGFloat = 5
     @State private var lineWidth: CGFloat = 5
     @Binding var progress: CGFloat
     var orientation: Orientation
-    var stops = ["Stop 1", "Stop 2"]
+    var stops: [RouteStop]
     var color: Color
     
     var body: some View {
@@ -36,7 +38,10 @@ struct MilestoneProgressView: View {
                 if orientation == .horizontal {
                     horizontalView(bounds: bounds, color: color)
                 } else {
-                    verticalView(bounds: bounds, color: color)
+                    HStack {
+                        verticalView(bounds: bounds, color: color)
+                        Spacer()
+                    }
                     ForEach(Array(stops.enumerated()), id: \.offset) { index, stop in
                         StopView(stop: stop)
                             .position(x: bounds.size.width / 2 + radius * 5, y: positionForStop(index: index, totalHeight: bounds.size.height))
@@ -44,7 +49,6 @@ struct MilestoneProgressView: View {
                 }
             }
         }
-        .padding()
     }
     
     private func positionForStop(index: Int, totalHeight: CGFloat) -> CGFloat {
@@ -57,7 +61,7 @@ struct MilestoneProgressView: View {
     private func horizontalView(bounds: GeometryProxy, color: Color) -> some View {
         MilestoneShape(count: Int(stops.count), radius: radius, orientation: orientation)
             .stroke(lineWidth: lineWidth)
-            .foregroundColor(color.opacity(1))
+            .foregroundColor(color.opacity(0.2))
             .padding(.horizontal, lineWidth/2)
             .frame(height: radius*2)
             .overlay {
@@ -68,7 +72,7 @@ struct MilestoneProgressView: View {
                     .mask(
                         HStack {
                             Rectangle()
-                                .frame(width: bounds.size.width * progress, alignment: .leading)
+                                .frame(width: bounds.size.width * progress, height: 1000, alignment: .leading)
                                 .blur(radius: 2)
                             Spacer(minLength: 0)
                         }
@@ -81,7 +85,7 @@ struct MilestoneProgressView: View {
     private func verticalView(bounds: GeometryProxy, color: Color) -> some View {
         MilestoneShape(count: Int(stops.count), radius: radius, orientation: orientation)
             .stroke(lineWidth: lineWidth)
-            .foregroundColor(color.opacity(1))
+            .foregroundColor(.black.opacity(0.3))
             .padding(.vertical, lineWidth/2)
             .frame(width: radius*2)
             .overlay {
@@ -92,7 +96,7 @@ struct MilestoneProgressView: View {
                     .mask(
                         VStack {
                             Rectangle()
-                                .frame(height: bounds.size.height * progress, alignment: .top)
+                                .frame(width: 1000, height: bounds.size.height * progress, alignment: .top)
                                 .blur(radius: 2)
                             Spacer(minLength: 0)
                         }
@@ -149,17 +153,22 @@ struct MilestoneProgressView: View {
 }
 
 struct StopView: View {
-    let stop: String
+    let stop: RouteStop
     
     var body: some View {
-        // Design your stop view here, for example:
-        Text(stop)
-            .padding(5)
-            .foregroundColor(.black)
-            .font(.caption)
+        HStack(alignment: .center) {
+            Text("10:32")
+                .bold()
+                .padding(.leading)
+            Text(stop.name)
+                .padding(.leading, 5)
+                .foregroundColor(.black)
+                .font(.caption)
+            Spacer()
+        }
     }
 }
 
 #Preview {
-    RouteProgressView(orientation: .vertical, color: .red)
+    RouteProgressView(orientation: .horizontal, color: .red, route: ActiveRouteViewModel.sampleRoutes.first!)
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavoriteLocationCard: View {
-    var favoriteLoc: FavoriteLocation
+    var favoriteLoc: FavoriteStop
     
     
     var body: some View {
@@ -21,7 +21,7 @@ struct FavoriteLocationCard: View {
             
             //Card
             VStack(alignment: .leading, spacing: 3) {
-                Text(favoriteLoc.name)
+                Text(favoriteLoc.stop.name)
                     .font(.headline)
 
                 Text(favoriteLoc.address)
@@ -44,5 +44,5 @@ struct FavoriteLocationCard: View {
 }
 
 #Preview {
-    FavoriteLocationCard(favoriteLoc: FavoriteLocation(name: "Casa", address: "Nuevo Sur", image: "revolucion"))
+    FavoriteLocationCard(favoriteLoc: FavoriteStop(stop: ActiveRouteViewModel.sampleRoutes.first!.stops.first!, address: "Nuevo Sur", image: "revolucion"))
 }

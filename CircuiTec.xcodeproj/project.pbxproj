@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE0A8C852BADDCCE00767157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEED56A32BAAAEA0009FA1A8 /* Assets.xcassets */; };
+		BE0A8C872BADDDA300767157 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0A8C862BADDDA300767157 /* ActivityManager.swift */; };
+		BE0A8C882BADDDA300767157 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0A8C862BADDDA300767157 /* ActivityManager.swift */; };
+		BE0A8C892BADDDC900767157 /* LiveRouteLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56C82BAB5E7F009FA1A8 /* LiveRouteLiveActivity.swift */; };
 		BE2D78D32BAC8E480096BAF7 /* ActiveRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D78D22BAC8E480096BAF7 /* ActiveRoute.swift */; };
 		BE2D78D42BAC91390096BAF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEED56CE2BAB5E80009FA1A8 /* Assets.xcassets */; };
 		BE2D78D62BACA4940096BAF7 /* RouteStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D78D52BACA4940096BAF7 /* RouteStop.swift */; };
@@ -37,6 +41,12 @@
 		BEED56D32BAB5E80009FA1A8 /* LiveRouteExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BEED56BF2BAB5E7F009FA1A8 /* LiveRouteExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BEED56D92BAB60A8009FA1A8 /* RouteProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B92BAB5C63009FA1A8 /* RouteProgressView.swift */; };
 		BEF48BBF2BAD0E7500643ECC /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF48BBE2BAD0E7500643ECC /* FirstView.swift */; };
+		BEF48BC12BAD2BCE00643ECC /* RouteMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF48BC02BAD2BCE00643ECC /* RouteMap.swift */; };
+		BEF48BC22BAD41FC00643ECC /* ActiveRouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE75052F2BACF0FE0051C567 /* ActiveRouteViewModel.swift */; };
+		BEF48BC32BAD420000643ECC /* ActiveRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D78D22BAC8E480096BAF7 /* ActiveRoute.swift */; };
+		BEF48BC42BAD420600643ECC /* FavoriteLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE75052A2BACEA7F0051C567 /* FavoriteLocation.swift */; };
+		BEF48BC62BAD450000643ECC /* FollowingRouteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF48BC52BAD450000643ECC /* FollowingRouteCard.swift */; };
+		BEF48BC82BADD30400643ECC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF48BC72BADD30400643ECC /* LocationManager.swift */; };
 		FB9131C82BACEE81009719FD /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9131C72BACEE81009719FD /* FavoriteView.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +75,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE0A8C862BADDDA300767157 /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
+		BE0A8C8A2BADE18F00767157 /* LiveRouteExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiveRouteExtension.entitlements; sourceTree = "<group>"; };
+		BE0A8C8B2BADE48F00767157 /* CircuiTec.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CircuiTec.entitlements; sourceTree = "<group>"; };
 		BE2D78D22BAC8E480096BAF7 /* ActiveRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRoute.swift; sourceTree = "<group>"; };
 		BE2D78D52BACA4940096BAF7 /* RouteStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteStop.swift; sourceTree = "<group>"; };
 		BE2D78D72BACA52F0096BAF7 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
@@ -92,6 +105,9 @@
 		BEED56CE2BAB5E80009FA1A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEED56D02BAB5E80009FA1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEF48BBE2BAD0E7500643ECC /* FirstView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstView.swift; path = Views/FirstView.swift; sourceTree = "<group>"; };
+		BEF48BC02BAD2BCE00643ECC /* RouteMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMap.swift; sourceTree = "<group>"; };
+		BEF48BC52BAD450000643ECC /* FollowingRouteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingRouteCard.swift; sourceTree = "<group>"; };
+		BEF48BC72BADD30400643ECC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FB9131C72BACEE81009719FD /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +142,7 @@
 		BEED56912BAAAE9F009FA1A8 = {
 			isa = PBXGroup;
 			children = (
+				BE0A8C8A2BADE18F00767157 /* LiveRouteExtension.entitlements */,
 				BEED569C2BAAAE9F009FA1A8 /* CircuiTec */,
 				BEED56C52BAB5E7F009FA1A8 /* LiveRoute */,
 				BEED56C02BAB5E7F009FA1A8 /* Frameworks */,
@@ -145,6 +162,7 @@
 		BEED569C2BAAAE9F009FA1A8 /* CircuiTec */ = {
 			isa = PBXGroup;
 			children = (
+				BE0A8C8B2BADE48F00767157 /* CircuiTec.entitlements */,
 				BEED56B02BAAAFC8009FA1A8 /* Model */,
 				BEED56AD2BAAAF19009FA1A8 /* Views */,
 				BEED569D2BAAAE9F009FA1A8 /* CircuiTecApp.swift */,
@@ -155,6 +173,8 @@
 				BEED56A32BAAAEA0009FA1A8 /* Assets.xcassets */,
 				BEED56A52BAAAEA0009FA1A8 /* Preview Content */,
 				BE7505312BACF1C10051C567 /* ViewModel */,
+				BEF48BC72BADD30400643ECC /* LocationManager.swift */,
+				BE0A8C862BADDDA300767157 /* ActivityManager.swift */,
 			);
 			path = CircuiTec;
 			sourceTree = "<group>";
@@ -175,6 +195,8 @@
 				BEED56B52BAB3E4B009FA1A8 /* RouteMapView.swift */,
 				BEED56B92BAB5C63009FA1A8 /* RouteProgressView.swift */,
 				BE7505282BACEA6D0051C567 /* FavoriteLocationCard.swift */,
+				BEF48BC02BAD2BCE00643ECC /* RouteMap.swift */,
+				BEF48BC52BAD450000643ECC /* FollowingRouteCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE0A8C852BADDCCE00767157 /* Assets.xcassets in Resources */,
 				BEED56CF2BAB5E80009FA1A8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,12 +338,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE0A8C872BADDDA300767157 /* ActivityManager.swift in Sources */,
 				BEED56AF2BAAAF9E009FA1A8 /* AllRoutesView.swift in Sources */,
 				BEED56BA2BAB5C63009FA1A8 /* RouteProgressView.swift in Sources */,
 				FB9131C82BACEE81009719FD /* FavoriteView.swift in Sources */,
+				BEF48BC62BAD450000643ECC /* FollowingRouteCard.swift in Sources */,
 				BEED56A02BAAAE9F009FA1A8 /* ContentView.swift in Sources */,
+				BE0A8C892BADDDC900767157 /* LiveRouteLiveActivity.swift in Sources */,
 				BEED56B62BAB3E4B009FA1A8 /* RouteMapView.swift in Sources */,
 				BEED56A22BAAAE9F009FA1A8 /* Item.swift in Sources */,
+				BEF48BC12BAD2BCE00643ECC /* RouteMap.swift in Sources */,
 				BE7505302BACF0FE0051C567 /* ActiveRouteViewModel.swift in Sources */,
 				BEED56B22BAAAFD2009FA1A8 /* Route.swift in Sources */,
 				BEE288CE2BAC8C76002714F1 /* ActiveRouteMapView.swift in Sources */,
@@ -330,6 +357,7 @@
 				BE2D78D32BAC8E480096BAF7 /* ActiveRoute.swift in Sources */,
 				BE2D78D62BACA4940096BAF7 /* RouteStop.swift in Sources */,
 				BE2D78D82BACA52F0096BAF7 /* Coordinate.swift in Sources */,
+				BEF48BC82BADD30400643ECC /* LocationManager.swift in Sources */,
 				BE75052B2BACEA7F0051C567 /* FavoriteLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +374,10 @@
 				BE7505252BACA7B40051C567 /* Route.swift in Sources */,
 				BEED56D92BAB60A8009FA1A8 /* RouteProgressView.swift in Sources */,
 				BEED56C72BAB5E7F009FA1A8 /* LiveRouteBundle.swift in Sources */,
+				BE0A8C882BADDDA300767157 /* ActivityManager.swift in Sources */,
+				BEF48BC42BAD420600643ECC /* FavoriteLocation.swift in Sources */,
+				BEF48BC22BAD41FC00643ECC /* ActiveRouteViewModel.swift in Sources */,
+				BEF48BC32BAD420000643ECC /* ActiveRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -469,7 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -485,19 +517,21 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CircuiTec/CircuiTec.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CircuiTec/Preview Content\"";
 				DEVELOPMENT_TEAM = 2JWSBNAJCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need access to your location to find your nearest stop";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -517,19 +551,21 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CircuiTec/CircuiTec.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CircuiTec/Preview Content\"";
 				DEVELOPMENT_TEAM = 2JWSBNAJCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need access to your location to find your nearest stop";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -548,6 +584,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LiveRouteExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2JWSBNAJCH;
@@ -555,6 +592,8 @@
 				INFOPLIST_FILE = LiveRoute/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = LiveRoute;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -575,6 +614,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LiveRouteExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2JWSBNAJCH;
@@ -582,6 +622,8 @@
 				INFOPLIST_FILE = LiveRoute/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = LiveRoute;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
