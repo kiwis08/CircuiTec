@@ -36,7 +36,7 @@
 		BEED56CF2BAB5E80009FA1A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEED56CE2BAB5E80009FA1A8 /* Assets.xcassets */; };
 		BEED56D32BAB5E80009FA1A8 /* LiveRouteExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BEED56BF2BAB5E7F009FA1A8 /* LiveRouteExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BEED56D92BAB60A8009FA1A8 /* RouteProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED56B92BAB5C63009FA1A8 /* RouteProgressView.swift */; };
-		FB9131C62BAC9420009719FD /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9131C52BAC9420009719FD /* FirstView.swift */; };
+		BEF48BBF2BAD0E7500643ECC /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF48BBE2BAD0E7500643ECC /* FirstView.swift */; };
 		FB9131C82BACEE81009719FD /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9131C72BACEE81009719FD /* FavoriteView.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,7 +91,7 @@
 		BEED56CC2BAB5E7F009FA1A8 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		BEED56CE2BAB5E80009FA1A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEED56D02BAB5E80009FA1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB9131C52BAC9420009719FD /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		BEF48BBE2BAD0E7500643ECC /* FirstView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstView.swift; path = Views/FirstView.swift; sourceTree = "<group>"; };
 		FB9131C72BACEE81009719FD /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,7 +148,7 @@
 				BEED56B02BAAAFC8009FA1A8 /* Model */,
 				BEED56AD2BAAAF19009FA1A8 /* Views */,
 				BEED569D2BAAAE9F009FA1A8 /* CircuiTecApp.swift */,
-				FB9131C52BAC9420009719FD /* FirstView.swift */,
+				BEF48BBE2BAD0E7500643ECC /* FirstView.swift */,
 				FB9131C72BACEE81009719FD /* FavoriteView.swift */,
 				BEED569F2BAAAE9F009FA1A8 /* ContentView.swift */,
 				BEED56A12BAAAE9F009FA1A8 /* Item.swift */,
@@ -170,7 +170,6 @@
 		BEED56AD2BAAAF19009FA1A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FB9131C52BAC9420009719FD /* FirstView.swift */,
 				BEE288CD2BAC8C76002714F1 /* ActiveRouteMapView.swift */,
 				BEED56AE2BAAAF9E009FA1A8 /* AllRoutesView.swift */,
 				BEED56B52BAB3E4B009FA1A8 /* RouteMapView.swift */,
@@ -319,7 +318,6 @@
 				BEED56AF2BAAAF9E009FA1A8 /* AllRoutesView.swift in Sources */,
 				BEED56BA2BAB5C63009FA1A8 /* RouteProgressView.swift in Sources */,
 				FB9131C82BACEE81009719FD /* FavoriteView.swift in Sources */,
-				BEED56B82BAB48E4009FA1A8 /* MainView.swift in Sources */,
 				BEED56A02BAAAE9F009FA1A8 /* ContentView.swift in Sources */,
 				BEED56B62BAB3E4B009FA1A8 /* RouteMapView.swift in Sources */,
 				BEED56A22BAAAE9F009FA1A8 /* Item.swift in Sources */,
@@ -328,7 +326,7 @@
 				BEE288CE2BAC8C76002714F1 /* ActiveRouteMapView.swift in Sources */,
 				BE7505292BACEA6D0051C567 /* FavoriteLocationCard.swift in Sources */,
 				BEED569E2BAAAE9F009FA1A8 /* CircuiTecApp.swift in Sources */,
-				FB9131C62BAC9420009719FD /* FirstView.swift in Sources */,
+				BEF48BBF2BAD0E7500643ECC /* FirstView.swift in Sources */,
 				BE2D78D32BAC8E480096BAF7 /* ActiveRoute.swift in Sources */,
 				BE2D78D62BACA4940096BAF7 /* RouteStop.swift in Sources */,
 				BE2D78D82BACA52F0096BAF7 /* Coordinate.swift in Sources */,
